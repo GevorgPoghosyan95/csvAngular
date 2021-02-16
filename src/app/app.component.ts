@@ -9,5 +9,5 @@ import {Observable} from 'rxjs';
 
 
 export class AppComponent {
-  title = 'Angular 10 File Upload';
+  title = 'CSV Upload';
 }

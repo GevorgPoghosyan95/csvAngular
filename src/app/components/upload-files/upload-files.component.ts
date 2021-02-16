@@ -49,5 +49,4 @@ export class UploadFilesComponent implements OnInit {
       });
     this.selectedFiles = undefined;
   }
-
 }

@@ -1,17 +1,17 @@
 <div *ngIf="currentFile" class="progress">
-<div
-  class="progress-bar progress-bar-info progress-bar-striped"
-  role="progressbar"
-  attr.aria-valuenow="{{ progress }}"
-  aria-valuemin="0"
-  aria-valuemax="100"
-  [ngStyle]="{ width: progress + '%' }">
-  {{ progress }}%
-</div>
+  <div
+    class="progress-bar progress-bar-info progress-bar-striped"
+    role="progressbar"
+    attr.aria-valuenow="{{ progress }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress + '%' }">
+    {{ progress }}%
+  </div>
 </div>
 
 <label class="btn btn-default">
-  <input type="file" (change)="selectFile($event)" />
+  <input type="file" (change)="selectFile($event)"/>
 </label>
 
 <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
@@ -27,7 +27,7 @@
     *ngFor="let file of fileInfos | async"
   >
     <li class="list-group-item">
-      <a href="{{ file.url }}">{{ file.name }}</a>
+      {{ file.name }} || Rows {{file.rows}} || Inserted {{file.inserted}}
     </li>
   </ul>
 </div>
